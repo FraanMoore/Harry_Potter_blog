@@ -1,0 +1,20 @@
+#navbar{
+  background-color: rgba(52, 52, 52, 0.1);
+  
+}
+#jumbotron{
+  backface-visibility: visible;
+  width: 70%;
+  border: none;
+  
+}
+p{
+  opacity: 0,3;
+  background-color: rgba(52, 52, 52, 0.1);
+  padding: none;
+  color: white; 
+}
+body{
+  background-image: url("https://images5.alphacoders.com/120/1207344.jpg");
+  background-size: cover;
+}
