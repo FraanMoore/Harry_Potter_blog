@@ -8,13 +8,27 @@
   border: none;
   
 }
-p{
+#descripcion{
   opacity: 0,3;
-  background-color: rgba(52, 52, 52, 0.1);
+  background-color: rgba(52, 52, 52, 0.2);
   padding: none;
   color: white; 
 }
 body{
   background-image: url("https://images5.alphacoders.com/120/1207344.jpg");
   background-size: cover;
+}
+h1{
+  color: #F9BD0A;
+}
+
+#card-houses{
+  padding-top: 15%;
+  width: 20rem; 
+  border: none;
+  color: white;
+  background-color: rgba(52, 52, 52, 0.3);
+}
+#btnHouse{
+  margin-top: 5%;
 }
