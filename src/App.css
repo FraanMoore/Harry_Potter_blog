@@ -32,3 +32,9 @@ h1{
 #btnHouse{
   margin-top: 5%;
 }
+#cardshousesDetails{
+  border: white;
+  background-color: rgba(52, 52, 52, 0.3);
+  color: whitesmoke;
+}
+

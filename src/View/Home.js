@@ -1,12 +1,16 @@
 import Cards from "../components/Cards";
+import Characters from "../components/Charecters";
+import Houses from "../components/Houses";
 import Jumbotron from "../components/Jumbotron";
 
 const Home = () => {
     return (
-        <div className="container d-box">
+            <div>
             <Jumbotron/>
             <Cards/>
-        </div>
+            <Characters/>
+            </div>
+   
     );
 };
 

@@ -10,16 +10,15 @@ function App() {
     <div>
       <BrowserRouter>
         <Navbar />
-        <Home/>
+
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/houses/" element={<Houses />} 
-                  path="/gryffindor"/>
+          <Route path="/home" element={<Home />} />
+          <Route path="/houses/:id" element={<Houses/>}/>
         </Routes>
       </BrowserRouter>
       
     </div>
-  );
+  ); 
 }
 
 export default App;
