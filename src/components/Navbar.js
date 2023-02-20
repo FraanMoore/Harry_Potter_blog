@@ -11,7 +11,7 @@ const Navbar = () => {
                 <div  className="collapse navbar-collapse d-flex justify-content-end" id="navbarNavDropdown">
                     <ul className="navbar-nav ">
                         <li className="nav-item dropdown ">
-                            <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a className="nav-link dropdown-toggle btn btn-outline-warning text-warning" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Favoritos
                             </a>
                             <ul className="dropdown-menu dropdown-menu-end">

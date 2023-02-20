@@ -1,45 +1,49 @@
-
 import React, { useEffect, useState } from "react";
-import { Params, useParams } from "react-router-dom";
-import Navbar from "../components/Navbar";
+import Characters from "../components/Characters";
+
 
 const Details = () => {
-    const { id } = useParams();
-    const { personaje, setPersonaje } = useState(null);
 
+    const [characters, setCharacters] = useState([]);
+    
+    const getCharacters = () => {
+        fetch("https://hp-api.onrender.com/api/characters")
+        .then((res) => res.json())
+        .then((data) => setCharacters(data.results))
+        .catch((error) => console.log(error));
+    };
     useEffect(() => {
-        const personajeUrl = 'https://hp-api.onrender.com/api/characters/${id}';
-        fetch(personajeUrl)
-            .then(res => res.json())
-            .then(data => {
-                const types = data.types.map(type => type.type.name);
-                const stats = data.stats.map(stat => {
-                    return { name: stat.stat.name, value: stat.base_stat };
-                });
-                setPersonaje({ ...data, types, stats })
-            })
-            .catch(err => console.log(err));
-    }, [id]);
+    getCharacters() 
+}, []);
 
 
-const { name, image, house, dateOfBirth, ancestry, patronus, actor, types, stats } = personaje;
 
 return (
     <div>
-        <div className="card-group">
-            <div className="card">
-                <img src={image.front_default} className="card-img-top" alt={name} />
-                <div className="card-body">
-                    <h5 className="card-title">{name}</h5>
-                    <h2 className="card-text">Características</h2>
-                    <p className="me-5">house: {house}</p>
-                    <p className="me-5">dateOfBirth: {dateOfBirth}</p>
-                    <p className="me-5">ancestry: {ancestry}</p>
-                    <p className="me-5">patronus: {patronus}</p>
-                    <p className="me-5">actor: {actor}</p>
+        <div className="card-group container-fluid">
+                <div className="card ">
+                    <div>
+                        {
+                        characters ? 
+                        
+                        characters.map((character) => (
+                        
+                        <Characters
+                       
+                        name={character.name}
+                        image={character.image}
+                        house={character.house}
+                        dateOfBirth={character.dateOfBirth}
+                        ancestry={character.ancestry}
+                        patronus={character.patronus}
+                        actor={character.actor}  
+                        />
+                        )) : "No hay personajes"
+                        }
+
+                    </div>
                 </div>
             </div>
-        </div>
     </div>
 );
 }
