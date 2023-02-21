@@ -2,19 +2,20 @@ import { Link } from "react-router-dom";
 
 
 const Card = (props) => {
+  
     return (
         <div id="card" className="fluid " >
 
             <div className=" container ">
 
-                <div className="card-group" >
-                    <img src={props.img} className="card-img-top" alt="..." />
-                    <div className="card-body text-center">
-                        <Link id="btnHouse" className="card-title btn btn-outline-warning" to={"/houses/id"}>{props.nameHouse}</Link>
-                    </div>
+                <div id="clickImgCasa" className="card-group">
+                    <Link to={"/houses/id"} >
+                        <img src={props.img} className="card-img-top" alt="..." />
+                    </Link>
                 </div>
             </div>
         </div>
+
     )
 };
 
@@ -23,13 +24,13 @@ const Cards = () => {
         <div>
             <div className="cards row row-cols-1 row-cols-sm-2 row-cols-md-4 justify-content-center" >
 
-                <div className="row"  id="housegryffindor">
+                <div className="row" id="housegryffindor">
                     <Card img="https://www.showmetech.com.br/wp-content/uploads//2023/01/Gryffindor_ClearBG.webp" title="Gryffindor"
-                        nameHouse="Gryffindor" 
-                        />
+                        nameHouse="Gryffindor"
+                    />
                 </div>
 
-                <div className="row" id="househufflepuff"> 
+                <div className="row" id="househufflepuff">
                     <Card img="https://i.pinimg.com/originals/09/39/55/093955fba76bfaf08ba037ded8772e61.png" title="Hufflepuff"
                         nameHouse="Hufflepuff" />
                 </div>

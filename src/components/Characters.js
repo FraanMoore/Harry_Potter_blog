@@ -1,4 +1,4 @@
-import { heart } from "fontawesome";
+
 
 
 const Characters = (props) => {
@@ -10,7 +10,7 @@ const Characters = (props) => {
             <div   className="card mb-4 ">
                 <div className="row g-0">
                     <div className="col-md-4">
-                        <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/hc_1440x810/public/media/image/2021/09/harry-potter-orden-fenix-2467329.jpg?itok=UicW_LdI" className="img-fluid rounded-start" alt="..." />
+                        <img src={props.image} className="img-fluid rounded-start" alt="..." />
                     </div>
                     <div className="col-md-8">
                         <div className="card-body">
