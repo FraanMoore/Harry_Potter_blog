@@ -1,11 +1,12 @@
-import Cards from "../components/Cards";
+
 import Jumbotron from "../components/Jumbotron";
+import Houses from "../components/Houses";
 
 const Home = () => {
     return (
             <div>
             <Jumbotron/>
-            <Cards/>
+            <Houses/>
             </div>
    
     );

@@ -43,8 +43,4 @@ h1{
   padding-left: 5%;
  
 }
-/* lo ideal seria el evento onmouseover*/
-#clickImgCasa:hover{
-  background: grey; 
-  
-}
+
