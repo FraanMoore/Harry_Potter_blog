@@ -12,10 +12,10 @@ const Navbar = () => {
                     <ul className="navbar-nav ">
                         <li className="nav-item dropdown ">
                             <a className="nav-link dropdown-toggle btn btn-outline-warning text-warning" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Favoritos
+                                Menú
                             </a>
                             <ul className="dropdown-menu dropdown-menu-end">
-                                <li><a className="dropdown-item" href="#">Action</a></li>
+                                <li><Link to="/favorites" className="dropdown-item">Favoritos</Link></li>
                             </ul>
                         </li>
                     </ul>

@@ -7,6 +7,9 @@ import Houses from './components/Houses';
 import Characters from './components/Characters';
 import Details from './View/details';
 
+import injectContext from './store/context'
+
+
 function App() {
   return (
     <div>
@@ -25,4 +28,4 @@ function App() {
   ); 
 }
 
-export default App;
+export default injectContext(App);
