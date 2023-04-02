@@ -8,6 +8,8 @@ import Characters from './components/Characters';
 import Details from './View/details';
 
 import injectContext from './store/context'
+import Favorites from './View/favorites';
+import Profile from './components/profile';
 
 
 function App() {
@@ -18,9 +20,10 @@ function App() {
 
         <Routes>
           <Route path="/home" element={<Home />} />
-          <Route path="/houses/:id" element={<Houses/>}/>
-          <Route path='/characters' element={<Details/>}/>
-        
+          <Route path="/houses" element={<Houses/>}/>
+          <Route path='/characters' element={<Details/>} />
+          <Route path='/profile' element={<Profile/>} />
+          <Route path='/favorites' element={<Favorites/>}/>
         </Routes>
       </BrowserRouter>
       

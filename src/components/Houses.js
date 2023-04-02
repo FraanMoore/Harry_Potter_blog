@@ -1,9 +1,13 @@
 import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+
+
 
 const House = (props) => {
-    
+
     return (
-        <div>
+        <div> 
             <div id={props.id} className="container">
                 <div id="cardshousesDetails">
                     <Link to={"/characters"}>
@@ -27,7 +31,7 @@ const Houses = () => {
                 <div className="row" id="gryffindor" >
                     <House img="https://i.pinimg.com/564x/45/7d/dd/457ddd31b8af485cda76445075929693.jpg" title="houseGryffindor"
                         description="Un buen miembro de Gryffindor tiene gran osadía, temple y caballerosidad. Son capaces de todo por defender en lo que creen y nunca se dan por vencidos. También son capaces de romper las reglas si es necesario y les encantan los retos, cuanto más difíciles, mejor."
- /* le pase el id para ver si funciona con el id del contenedor y params*/ id="gryffindor" />
+                            id="gryffindor" />
                 </div>
                 <div className="row" id="hufflepuff" >
                     <House img="https://i.pinimg.com/564x/8e/cb/22/8ecb22f7a6d640aeab934b0bf191ba01.jpg" title="houseHufflepuff"

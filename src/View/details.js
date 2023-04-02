@@ -3,9 +3,10 @@ import Characters from "../components/Characters";
 
 const Details = () => {
     const [characters, setCharacters] = useState([]);
+ 
 
     const getCharacters = () => {
-        fetch("https://hp-api.onrender.com/api/characters")
+        fetch("https://hp-api.onrender.com/api/characters/")
             .then(res => res.json())
             .then(data => setCharacters(data))
             .catch(err => console.log(err))
@@ -25,6 +26,7 @@ const Details = () => {
                             <Characters
 
                                 image={character.image}
+                                name={character.name}
                                 house={character.house}
                                 dateOfBirth={character.dateOfBirth}
                                 ancestry={character.ancestry}

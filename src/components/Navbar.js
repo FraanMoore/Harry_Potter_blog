@@ -6,7 +6,6 @@ const Navbar = () => {
         <nav id="navbar" className="navbar navbar-expand-lg bg-body-tertiary" style={{background: "none"}}>
             <div className="container-fluid ">
                 <Link className="navbar-brand text-warning fs-2" to={"/Home"}>Harry Potter </Link>
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" />
 
                 <div  className="collapse navbar-collapse d-flex justify-content-end" id="navbarNavDropdown">
                     <ul className="navbar-nav ">
@@ -16,6 +15,7 @@ const Navbar = () => {
                             </a>
                             <ul className="dropdown-menu dropdown-menu-end">
                                 <li><Link to="/favorites" className="dropdown-item">Favoritos</Link></li>
+                                <li><Link to="/characters" className="dropdown-item">Personajes</Link></li>
                             </ul>
                         </li>
                     </ul>

@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart } from '@fortawesome/free-solid-svg-icons'
 import { useContext } from 'react';
 import { Context } from '../store/context';
-
+import { Link } from 'react-router-dom';
 
 const Characters = (props) => {
 
@@ -24,14 +24,12 @@ const Characters = (props) => {
                     <div className="col-md-8">
                         <div className="card-body">
                           
-                            <h5 className="card-title">Nombre: {props.name}</h5>
-                            <p className="card-text">Casa: {props.house}</p>
-                            <p className="card-text">Cumpleaños: {props.dateOfBirth}</p>
-                            <p className="card-text">Sangre: {props.ancestry}</p>
-                            <p className="card-text">Patronus: {props.patronus}</p>
-                            <p className="card-text">Actor: {props.actor}</p>
+                            <h5 className="card-title">{props.name}</h5>
                             <button onClick={handleSubmit}> {like} </button>
+                            
+                           <p> <Link to={"/profile"}>Ver más</Link></p>
                         </div>
+                        
                     </div>  
                 </div>
             </div>
