@@ -5,14 +5,14 @@ import { useContext } from "react";
 import { Context } from "../store/context";
 
 const Home = () => {
-    const {store, actions} = useContext(Context);
+    const { store, actions } = useContext(Context);
     return (
-            <div>
-                {store.favoritos}
-            <Jumbotron/>
-            <Houses/>
-            </div>
-   
+        <div>
+            {store.favoritos}
+            <Jumbotron />
+            <Houses />
+        </div>
+
     );
 };
 

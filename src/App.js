@@ -10,6 +10,8 @@ import Details from './View/details';
 import injectContext from './store/context'
 import Favorites from './View/favorites';
 import Profile from './components/profile';
+import Login from './View/login';
+import Register from './View/register';
 
 
 function App() {
@@ -24,6 +26,8 @@ function App() {
           <Route path='/characters' element={<Details/>} />
           <Route path='/profile' element={<Profile/>} />
           <Route path='/favorites' element={<Favorites/>}/>
+          <Route path='/login' element={<Login/>}/>
+          <Route path='/users' element={<Register/>}/>
         </Routes>
       </BrowserRouter>
       

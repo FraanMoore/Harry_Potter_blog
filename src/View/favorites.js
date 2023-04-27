@@ -2,7 +2,7 @@
 import { useContext } from "react";
 import { Context } from "../store/context";
 
-const Favorites = (props) => {
+const Favorites = () => {
     const {store, actions} = useContext(Context);
 
     return(

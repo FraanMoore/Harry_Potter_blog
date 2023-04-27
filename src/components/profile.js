@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+
 import { useParams } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -35,7 +35,7 @@ const Profile = (props) => {
         getCharacter();
         console.log(character);
 
-    }, [id])
+    }, [])
     return (
         <div id="card-characters">
             <div className="card mb-4 ">
