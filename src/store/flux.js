@@ -58,6 +58,7 @@ export const getState = ({ setStore, getActions, getStore }) => {
             handleUserLogin: (e) => {
                 e.preventDefault();
                 const { user } = getStore();
+
                 fetch("http://localhost:8000/login", {
                     headers: {
                         "Content-Type": "application/json"
@@ -65,23 +66,27 @@ export const getState = ({ setStore, getActions, getStore }) => {
                     method: "POST",
                     body: JSON.stringify(user)
                 }).then(res => res.json())
-                    .then(data => console.log(data))
+                    .then(data => 
+                        setStore({ 
+                            token: data.token,
+                            user: {
+                                username: "",
+                                password: "",
+                            }
+                        })
+                        )
                     .catch(error => console.log(error))
-                setStore({
-                    user: {
-                        username: "",
-                        password: "",
-                    }
-                })
+              
             },
             getUsers: () => {
+                const { token } = getStore()
                 fetch("http://localhost:8000/users/list", {
                     headers:
                     {"Content-Type": "application/json",
-                    "Authorization": "Bearer "}
+                    "Authorization": "Bearer " + token}
                 })
                 .then((res) => res.json())
-                .then((data) => console.log(data))
+                .then((data) => setStore({users: data}))
                 .catch((error) => console.log(error));
             }
         },
