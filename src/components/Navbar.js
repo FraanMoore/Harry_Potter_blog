@@ -5,7 +5,7 @@ const Navbar = () => {
     return (
         <nav id="navbar" className="navbar navbar-expand-lg bg-body-tertiary" style={{background: "none"}}>
             <div className="container-fluid ">
-                <Link className="navbar-brand text-warning fs-2" to={"/Home"}>Harry Potter </Link>
+                <Link className="navbar-brand text-warning fs-2" to={"/"}>Harry Potter </Link>
 
                 <div>
                     <ul className="navbar-nav ">

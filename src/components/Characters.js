@@ -25,9 +25,9 @@ const Characters = (props) => {
                         <div className="card-body">
                           
                             <h5 className="card-title">{props.name}</h5>
-                            <button onClick={handleSubmit}> {like} </button>
-                            
-                           <p> <Link to={"/profile"}>Ver más</Link></p>
+                            <button className="btn btn-outline-warning text-danger" onClick={handleSubmit}> {like} </button>
+                           <p> <Link to={"/profile"} style={{textDecoration: "none", color: "black"}} 
+                           >Ver más</Link></p>
                         </div>
                         
                     </div>  

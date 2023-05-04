@@ -54,7 +54,7 @@ const Profile = (props) => {
                             <p className="card-text">Sangre: {character.ancestry}</p>
                             <p className="card-text">Patronus: {character.patronus}</p>
                             <p className="card-text">Actor: {character.actor}</p>
-                            <button onClick={handleSubmit}> {like} </button>
+                            <button className="btn btn-outline-warning text-danger" onClick={handleSubmit}> {like} </button>
                         </div>
                     </div>
                 </div>
