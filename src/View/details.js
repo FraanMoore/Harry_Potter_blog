@@ -3,7 +3,7 @@ import Characters from "../components/Characters";
 
 const Details = () => {
     const [characters, setCharacters] = useState([]);
- 
+
 
     const getCharacters = () => {
         fetch("https://hp-api.onrender.com/api/characters/")
@@ -20,7 +20,27 @@ const Details = () => {
         <div className="container">
             <div className="row">
 
-                {
+                {characters ?
+                    characters.map((character, i) => ( 
+
+                        <div className="col-md-12" key={i}>
+                            <Characters
+
+                                image={character.image}
+                                name={character.name}
+                                house={character.house}
+                                dateOfBirth={character.dateOfBirth}
+                                ancestry={character.ancestry}
+                                patronus={character.patronus}
+                                actor={character.actor}
+                                id={character.id}
+                            />
+                        </div>
+
+
+                    ))
+                    : "Error. No se pudieron cargar los personasjes"}
+                {/*
                     characters.map((character) => (
                         <div className="col-md-12">
                             <Characters
@@ -35,7 +55,7 @@ const Details = () => {
                             />
                         </div>
                     ))
-                }
+                */}
 
             </div>
 

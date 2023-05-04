@@ -22,20 +22,11 @@ h1{
   color: #F9BD0A;
 }
 
-#card-houses{
-  padding-top: 15%;
-  width: 20rem; 
-  border: none;
-  color: white;
-  background-color: rgba(52, 52, 52, 0.3);
-}
 #btnHouse{
   margin-top: 5%;
 }
 #cardshousesDetails{
-  border: white;
-  background-color: rgba(52, 52, 52, 0.3);
-  color: whitesmoke;
+  padding: none;
 }
 
 #card-characters{
@@ -43,4 +34,15 @@ h1{
   padding-left: 5%;
  
 }
+.card-img-top:hover{
+  filter: opacity(.5);
+}
+.card-img-top{
+  border-Radius: 50px;
+  padding-bottom: 10%;
+}
 
+.card-text{
+  padding: 5%;
+
+}

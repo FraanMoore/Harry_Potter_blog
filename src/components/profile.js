@@ -10,9 +10,6 @@ import { useContext } from "react";
 
 const Profile = (props) => {
 
-    const { id } = useParams();
-
-
     const like = <FontAwesomeIcon icon={faHeart} />
 
     const { actions } = useContext(Context);
@@ -21,39 +18,50 @@ const Profile = (props) => {
         actions.addFavorite(props.name);
     };
 
+    const { id } = useParams();
     const [character, setCharacter] = useState([]);
 
-
-    const getCharacter = () => {
-        const url = `https://hp-api.onrender.com/api/characters/${id}`
+    const getCharacter = (id) => {
+        const url = `https://hp-api.onrender.com/api/character/${id}`;
+        
         fetch(url)
             .then(res => res.json())
-            .then(data => setCharacter(data))
-            .catch(err => console.log(err))
+            .then(data => {
+                //console.log(data)
+                setCharacter(data[0])})
+            .catch(error => console.log(error))
     };
-    useEffect(() => {
-        getCharacter();
-        console.log(character);
 
-    }, [])
+    useEffect(() => {
+        console.log (id)
+        getCharacter(id);
+        //console.log(character);
+
+    }, [] )
+
+    useEffect(() => {           
+        getCharacter(id);
+        //console.log(character);
+
+    }, [id] )
     return (
         <div id="card-characters">
             <div className="card mb-4 ">
                 <div className="row g-0">
                     <div className="col-md-4">
-                        {character.length > 0 &&
-                            <img src={character.image} className="img-fluid rounded-start" alt="..." />
-                        }
+                        
+                            <img src={character?.image} className="img-fluid rounded-start" alt="..." />
+                        
                     </div>
                     <div className="col-md-8">
                         <div className="card-body">
 
-                            <h5 className="card-title">{character.name}</h5>
-                            <p className="card-text">Casa: {character.house}</p>
-                            <p className="card-text">Cumpleaños: {character.dateOfBirth}</p>
-                            <p className="card-text">Sangre: {character.ancestry}</p>
-                            <p className="card-text">Patronus: {character.patronus}</p>
-                            <p className="card-text">Actor: {character.actor}</p>
+                            <h5 className="card-title">{character?.name}</h5>
+                            <p className="card-text">Casa: {character?.house}</p>
+                            <p className="card-text">Cumpleaños: {character?.dateOfBirth}</p>
+                            <p className="card-text">Sangre: {character?.ancestry}</p>
+                            <p className="card-text">Patronus: {character?.patronus}</p>
+                            <p className="card-text">Actor: {character?.actor}</p>
                             <button className="btn btn-outline-warning text-danger" onClick={handleSubmit}> {like} </button>
                         </div>
                     </div>

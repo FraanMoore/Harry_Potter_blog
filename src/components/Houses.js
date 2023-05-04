@@ -13,8 +13,8 @@ const House = (props) => {
                     <Link to={"/characters"}>
                     <img src={props.img} className="card-img-top" alt="..." />
                     </Link>
-                    <div className="card-body ">
-                        <p className="card-text">{props.description}</p>
+                    <div className="card-body" style={{background: "white", borderRadius: "15px"}}>
+                        <p className="card-text text-center">{props.description}</p>
                     </div>
                 </div>
             </div>
