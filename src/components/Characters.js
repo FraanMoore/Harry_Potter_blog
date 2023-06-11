@@ -16,18 +16,21 @@ const Characters = (props) => {
 
 
         <div id="card-characters">
-            <div   className="card mb-4 ">
+            <div className="card mb-4 p-3">
                 <div className="row g-0">
                     <div className="col-md-4">
-                        <img src={props.image} className="img-fluid rounded-start" alt="..." />
+                        <img src={props.image} className="img-fluid rounded-start" style={{width: "90%", height: "280px"}} alt="..." />
                     </div>
                     <div className="col-md-8">
                         <div className="card-body">
                           
-                            <h5 className="card-title">{props.name}</h5>
-                            <button className="btn btn-outline-warning text-danger" onClick={handleSubmit}> {like} </button>
-                           <p> <Link to={`/profile/${props.id}`} style={{textDecoration: "none", color: "black"}} 
+                            <h5 className="card-title fs-3">{props.name}</h5>
+                            <p>{props.house}</p>
+                            <div className='position-absolute bottom-0 start-25'>
+                            <button className="btn btn-outline-warning text-danger " onClick={handleSubmit}> {like} </button>
+                           <p><Link to={`/profile/${props.id}`} style={{textDecoration: "none", color: "black"}} 
                            >Ver más</Link></p>
+                           </div>
                         </div>
                         
                     </div>  

@@ -45,24 +45,29 @@ const Profile = (props) => {
 
     }, [id] )
     return (
-        <div id="card-characters">
-            <div className="card mb-4 ">
+        <div id="profile-card">
+            <div className="card mb-4 p-3">
                 <div className="row g-0">
                     <div className="col-md-4">
                         
-                            <img src={character?.image} className="img-fluid rounded-start" alt="..." />
+                            <img src={character?.image} className="img-fluid rounded-start" style={{ width: "400px",
+height: "280px"}} alt="..." />
                         
                     </div>
                     <div className="col-md-8">
-                        <div className="card-body">
+                        <div className="card-body" style={{paddingLeft:"20px"}} >
 
-                            <h5 className="card-title">{character?.name}</h5>
-                            <p className="card-text">Casa: {character?.house}</p>
-                            <p className="card-text">Cumpleaños: {character?.dateOfBirth}</p>
-                            <p className="card-text">Sangre: {character?.ancestry}</p>
-                            <p className="card-text">Patronus: {character?.patronus}</p>
-                            <p className="card-text">Actor: {character?.actor}</p>
+                            <h5 className="card-title fs-3">{character?.name}</h5>
+                            <ul style={{padding: "3px", listStyle: "none"}}>
+                            <li className="card-text"><b>Casa:</b> {character?.house}</li>
+                            <li className="card-text"><b>Cumpleaños:</b> {character?.dateOfBirth}</li>
+                            <li className="card-text"><b>Sangre:</b> {character?.ancestry}</li>
+                            <li className="card-text"><b>Patronus:</b> {character?.patronus}</li>
+                            <li className="card-text"><b>Actor:</b> {character?.actor}</li>
+                            </ul>
+           
                             <button className="btn btn-outline-warning text-danger" onClick={handleSubmit}> {like} </button>
+                        
                         </div>
                     </div>
                 </div>

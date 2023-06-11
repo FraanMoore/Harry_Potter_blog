@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
     return (
-        <nav id="navbar" className="navbar navbar-expand-lg bg-body-tertiary" style={{background: "none"}}>
+        <nav id="navbar" className="navbar navbar-expand-lg bg-body-tertiary sticky-top" style={{background: "none"}}>
             <div className="container-fluid ">
                 <Link className="navbar-brand text-warning fs-2" to={"/"}>Harry Potter </Link>
 
@@ -18,7 +18,7 @@ const Navbar = () => {
                                 <li><Link to="/characters" className="dropdown-item">Personajes</Link></li>
                                 <li><Link to="/login" className="dropdown-item">Login</Link></li>
                                 <li><Link to="/users" className="dropdown-item">Registrarse</Link></li>
-                                <a style={{textDecoration: "none", color: "black", paddingLeft:"16px"}} href="/home">Cerrar sesión</a>
+                                <a style={{textDecoration: "none", color: "black", paddingLeft:"16px"}} href="/">Cerrar sesión</a>
                             </ul>
                         </li>
                     </ul>

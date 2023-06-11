@@ -28,7 +28,7 @@ const Favorites = () => {
                     </ul>
                 ))
             ) : (
-                <li className="dropdown-item-text text-center text-secondary"> Empty </li>
+                <li className="dropdown-item-text text-center text-secondary"> Vacío </li>
 
             )}
         
